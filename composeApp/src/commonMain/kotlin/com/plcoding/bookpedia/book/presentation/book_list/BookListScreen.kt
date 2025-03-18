@@ -60,11 +60,12 @@ fun BookListScreenRoot(
         onAction = {
             action ->
             when(action){
-                is BookListAction.OnBookClick -> BookListAction.OnBookClick(action.book)
+                is BookListAction.OnBookClick -> onBookClick(action.book)
                 else -> Unit
             }
             viewModel.onAction(action)
-        }
+        },
+        onBookClick = onBookClick
 
     )
 }
@@ -75,6 +76,7 @@ private fun BookListScreen(
 
     state: BookListState,
     onAction: (BookListAction) -> Unit,
+    onBookClick: (Book) -> Unit
 ){
 
     val keyboardController = LocalSoftwareKeyboardController.current
@@ -223,6 +225,7 @@ private fun BookListScreen(
                                         books = state.favouriteBooks,
                                         onBookClick = {
                                             onAction(BookListAction.OnBookClick(it))
+                                            onBookClick(it)
                                         },
                                         modifier = Modifier.fillMaxSize(),
                                         scrollState = favoriteBooksListState
