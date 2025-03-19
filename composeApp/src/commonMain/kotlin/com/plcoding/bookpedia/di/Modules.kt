@@ -6,6 +6,7 @@ import com.plcoding.bookpedia.book.data.repository.DefaultBookRepository
 import com.plcoding.bookpedia.book.domain.BookRepository
 import com.plcoding.bookpedia.core.data.HttpClientFactory
 import com.plcoding.bookpedia.book.presentation.book_list.BookListViewModel
+import com.plcoding.bookpedia.book.presentation.book_details.BookDetailsViewModel
 import com.plcoding.bookpedia.book.presentation.SelectedBookViewModel
 import org.koin.core.module.Module
 import org.koin.core.module.dsl.singleOf
@@ -24,6 +25,7 @@ val sharedModule = module {
 
     viewModelOf(::BookListViewModel)
     viewModelOf(::SelectedBookViewModel)
+    viewModelOf(::BookDetailsViewModel)
 
 
 }

@@ -14,5 +14,4 @@ class SelectedBookViewModel: ViewModel() {
         _selectedBook.value = book
     }
 
-
 }
