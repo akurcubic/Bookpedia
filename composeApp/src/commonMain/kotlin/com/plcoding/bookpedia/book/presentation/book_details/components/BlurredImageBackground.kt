@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
@@ -46,6 +47,7 @@ import cmp_bookpedia.composeapp.generated.resources.book_error_2
 import cmp_bookpedia.composeapp.generated.resources.go_back
 import cmp_bookpedia.composeapp.generated.resources.mark_as_favorite
 import cmp_bookpedia.composeapp.generated.resources.remove_from_favorites
+import com.plcoding.bookpedia.core.presentation.PulseAnimation
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 
@@ -92,7 +94,9 @@ fun BlurredImageBackground(
                         painter = painter,
                         contentDescription = stringResource(Res.string.book_cover),
                         contentScale = ContentScale.Crop,
-                        modifier = Modifier.fillMaxSize().blur(20.dp)
+                        modifier = Modifier
+                            .fillMaxSize()
+                            .blur(20.dp)
                     )
                 }
 
@@ -120,7 +124,6 @@ fun BlurredImageBackground(
             ElevatedCard(
                 modifier = Modifier.height(270.dp).aspectRatio(2 / 3f),
                 shape = RoundedCornerShape(8.dp),
-                colors = CardDefaults.elevatedCardColors(contentColor = Color.Transparent),
                 elevation = CardDefaults.elevatedCardElevation(
                     defaultElevation = 15.dp
                 )
@@ -129,7 +132,14 @@ fun BlurredImageBackground(
                     targetState = imageLoadResult
                 ){result ->
                     when(result){
-                        null -> CircularProgressIndicator()
+                        null -> Box(
+                            modifier = Modifier.fillMaxSize(),
+                            contentAlignment = Alignment.Center
+                        ){
+                            PulseAnimation(
+                                Modifier.size(60.dp)
+                            )
+                        }
                         else -> {
                             Box{
                                 Image(
