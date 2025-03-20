@@ -13,13 +13,10 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
-import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material.icons.filled.Favorite
-import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.outlined.FavoriteBorder
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -43,12 +40,12 @@ import coil3.compose.rememberAsyncImagePainter
 import com.plcoding.bookpedia.core.presentation.DarkBlue
 import com.plcoding.bookpedia.core.presentation.DesertWhite
 import com.plcoding.bookpedia.core.presentation.SandYellow
-import com.plcoding.bookpedia.resources.Res
-import com.plcoding.bookpedia.resources.book_cover
-import com.plcoding.bookpedia.resources.book_error_2
-import com.plcoding.bookpedia.resources.go_back
-import com.plcoding.bookpedia.resources.mark_as_favorite
-import com.plcoding.bookpedia.resources.remove_from_favorites
+import cmp_bookpedia.composeapp.generated.resources.Res
+import cmp_bookpedia.composeapp.generated.resources.book_cover
+import cmp_bookpedia.composeapp.generated.resources.book_error_2
+import cmp_bookpedia.composeapp.generated.resources.go_back
+import cmp_bookpedia.composeapp.generated.resources.mark_as_favorite
+import cmp_bookpedia.composeapp.generated.resources.remove_from_favorites
 import org.jetbrains.compose.resources.painterResource
 import org.jetbrains.compose.resources.stringResource
 

@@ -38,8 +38,8 @@ import com.plcoding.bookpedia.book.domain.Book
 
 import com.plcoding.bookpedia.core.presentation.LightBlue
 import com.plcoding.bookpedia.core.presentation.SandYellow
-import com.plcoding.bookpedia.resources.Res
-import com.plcoding.bookpedia.resources.book_error_2
+import cmp_bookpedia.composeapp.generated.resources.Res
+import cmp_bookpedia.composeapp.generated.resources.book_error_2
 import org.jetbrains.compose.resources.painterResource
 import kotlin.math.round
 

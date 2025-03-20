@@ -19,9 +19,9 @@ import androidx.compose.runtime.CompositionLocalProvider
 import com.plcoding.bookpedia.core.presentation.DarkBlue
 import com.plcoding.bookpedia.core.presentation.DesertWhite
 import com.plcoding.bookpedia.core.presentation.SandYellow
-import com.plcoding.bookpedia.resources.Res
-import com.plcoding.bookpedia.resources.close_hint
-import com.plcoding.bookpedia.resources.search_hint
+import cmp_bookpedia.composeapp.generated.resources.Res
+import cmp_bookpedia.composeapp.generated.resources.close_hint
+import cmp_bookpedia.composeapp.generated.resources.search_hint
 import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
