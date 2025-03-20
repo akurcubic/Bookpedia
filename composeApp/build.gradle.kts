@@ -19,7 +19,7 @@ kotlin {
             jvmTarget.set(JvmTarget.JVM_11)
         }
     }
-    
+
     listOf(
         iosX64(),
         iosArm64(),
@@ -30,7 +30,7 @@ kotlin {
             isStatic = true
         }
     }
-    
+
     jvm("desktop")
 
     room {
@@ -39,7 +39,7 @@ kotlin {
 
     sourceSets {
         val desktopMain by getting
-        
+
         androidMain.dependencies {
             implementation(compose.preview)
             implementation(libs.androidx.activity.compose)
@@ -113,14 +113,7 @@ android {
     }
 }
 
-compose.resources {
-    publicResClass = true
-    packageOfResClass = "com.plcoding.bookpedia.resources"
-    generateResClass = auto
-}
-
 dependencies {
-    implementation(libs.androidx.material3.android)
     debugImplementation(compose.uiTooling)
 }
 

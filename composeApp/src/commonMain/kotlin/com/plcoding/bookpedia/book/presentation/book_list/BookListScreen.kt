@@ -38,11 +38,11 @@ import com.plcoding.bookpedia.book.presentation.book_list.components.BookSearchB
 import com.plcoding.bookpedia.core.presentation.DarkBlue
 import com.plcoding.bookpedia.core.presentation.DesertWhite
 import com.plcoding.bookpedia.core.presentation.SandYellow
-import com.plcoding.bookpedia.resources.Res
-import com.plcoding.bookpedia.resources.favorites
-import com.plcoding.bookpedia.resources.no_favorite_books
-import com.plcoding.bookpedia.resources.no_search_results
-import com.plcoding.bookpedia.resources.search_results
+import cmp_bookpedia.composeapp.generated.resources.Res
+import cmp_bookpedia.composeapp.generated.resources.favorites
+import cmp_bookpedia.composeapp.generated.resources.no_favorite_books
+import cmp_bookpedia.composeapp.generated.resources.no_search_results
+import cmp_bookpedia.composeapp.generated.resources.search_results
 import org.jetbrains.compose.resources.stringResource
 import org.koin.compose.viewmodel.koinViewModel
 
@@ -213,7 +213,7 @@ private fun BookListScreen(
                                 }
                             }
                             1 -> {
-                                if(state.favouriteBooks.isEmpty()){
+                                if(state.favoriteBooks.isEmpty()){
                                     Text(
                                         text = stringResource(Res.string.no_favorite_books),
                                         textAlign = TextAlign.Center,
@@ -222,7 +222,7 @@ private fun BookListScreen(
                                 }
                                 else{
                                     BookList(
-                                        books = state.favouriteBooks,
+                                        books = state.favoriteBooks,
                                         onBookClick = {
                                             onAction(BookListAction.OnBookClick(it))
                                             onBookClick(it)

@@ -27,16 +27,16 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
+import cmp_bookpedia.composeapp.generated.resources.Res
+import cmp_bookpedia.composeapp.generated.resources.description_unavailable
+import cmp_bookpedia.composeapp.generated.resources.languages
+import cmp_bookpedia.composeapp.generated.resources.pages
+import cmp_bookpedia.composeapp.generated.resources.rating
+import cmp_bookpedia.composeapp.generated.resources.synopsis
 import com.plcoding.bookpedia.book.presentation.book_details.components.BlurredImageBackground
 import com.plcoding.bookpedia.book.presentation.book_details.components.BookChip
 import com.plcoding.bookpedia.book.presentation.book_details.components.ChipSize
 import com.plcoding.bookpedia.book.presentation.book_details.components.TitledContent
-import com.plcoding.bookpedia.resources.Res
-import com.plcoding.bookpedia.resources.description_unavailable
-import com.plcoding.bookpedia.resources.languages
-import com.plcoding.bookpedia.resources.pages
-import com.plcoding.bookpedia.resources.rating
-import com.plcoding.bookpedia.resources.synopsis
 import org.jetbrains.compose.resources.stringResource
 import kotlin.math.round
 
